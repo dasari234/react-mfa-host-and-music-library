@@ -34,7 +34,7 @@ jobs:
           publish-dir: ./host-app/dist  # Adjust based on your build output
           production-branch: main
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          deploy-message: "Frontend Deploy 🚀"
+          deploy-message: "Host Application Deploy 🚀"
           netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           netlify-site-id: ${{ secrets.NETLIFY_HOST_SITE_ID }}
 
@@ -57,14 +57,14 @@ jobs:
         run: npm install
 
       - name: Build music library
-        run: npm run deploy
+        run: npm run build
 
-      - name: Deploy admin to Netlify
+      - name: Deploy music library to Netlify
         uses: nwtgck/actions-netlify@v2
         with:
           publish-dir: ./music-library/dist  # Adjust based on your build output
           production-branch: main
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          deploy-message: "Admin Deploy 🚀"
+          deploy-message: "Remote Application Deploy 🚀"
           netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           netlify-site-id: ${{ secrets.NETLIFY_REMOTE_SITE_ID }}
