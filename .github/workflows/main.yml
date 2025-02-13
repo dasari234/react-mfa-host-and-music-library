@@ -33,7 +33,7 @@ jobs:
         with:
           publish-dir: ./host-app/dist  # Adjust based on your build output
           production-branch: main
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.DASARI_GIT_HUB }}
           deploy-message: "Host Application Deploy 🚀"
           netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           netlify-site-id: ${{ secrets.NETLIFY_HOST_SITE_ID }}
@@ -69,7 +69,7 @@ jobs:
         with:
           publish-dir: ./music-library/dist  # Adjust based on your build output
           production-branch: main
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.DASARI_GIT_HUB }}
           deploy-message: "Remote Application Deploy 🚀"
           netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           netlify-site-id: ${{ secrets.NETLIFY_REMOTE_SITE_ID }}
