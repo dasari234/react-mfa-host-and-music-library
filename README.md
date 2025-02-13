@@ -82,6 +82,7 @@ export default defineConfig({
 ## - Running Tests
 - Run the ```npm run test``` command in each independent application to view the status of the test cases and to verify the code coverage run the following command ```npm run test:coverage```
 
-### User Authentication
+### User Authentication & Authorization
+- Host application can be launched from the following local host url ```http://localhost:5173/```
 - Enter username as ```admin``` for admin role
 - Enter username as ```user``` for user role
