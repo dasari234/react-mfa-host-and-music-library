@@ -1,7 +1,7 @@
 # Music Library with Micro Frontend Architecture
-## Step 1 - access the assignment code from github link (https://github.com/dasari234/react-mfa-host-and-music-library)
-#### Using npm create vite@latest, two react-independent applications were created.
-#### One is for the Music Library application (music-library), which allows the user to view, group, filter, and sort a collection of songs; the other is for the Host application (host-app) to use the Music Library app (Micro Frontend Architecture).
+
+#### *Using npm create vite@latest, two react independent applications were created.
+#### *One is for the Music Library application (music-library), which allows the user to view, group, filter, and sort a collection of songs; the other is for the Host application (host-app) to use the Music Library app (Micro Frontend Architecture).
 
 ### step1 - Take the repository from your preferred terminal and clone it. (https://github.com/dasari234/react-mfa-host-and-music-library.git)
 ### Installation Steps
