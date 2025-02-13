@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy-frontend:
+  deploy-host-app:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -38,7 +38,7 @@ jobs:
           netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           netlify-site-id: ${{ secrets.NETLIFY_HOST_SITE_ID }}
 
-  deploy-admin:
+  deploy-remote-app:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -52,12 +52,17 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
+      
+      - name: Remove node_modules and package-lock.json
+        run: |
+          rm -rf node_modules
+          rm -f package-lock.json
 
       - name: Install dependencies
         run: npm install
 
       - name: Build music library
-        run: npm run build
+        run: npm run deploy
 
       - name: Deploy music library to Netlify
         uses: nwtgck/actions-netlify@v2
