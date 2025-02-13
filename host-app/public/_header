@@ -1,2 +1,2 @@
 /assets/*
-  Access-Control-Allow-Origin: https://remote-mfa.netlify.app
+  Access-Control-Allow-Origin: https://host-mfa.netlify.app
