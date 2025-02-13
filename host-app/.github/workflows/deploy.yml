@@ -27,11 +27,11 @@ jobs:
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v2
         with:
-          publish-dir: ./music-library/dist # Change this to your build output directory
+          publish-dir: ./host-app/dist # Change this to your build output directory
           production-branch: main
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: "Deploy from GitHub Actions 🚀"
           enable-pull-request-comment: false
           enable-commit-comment: false
           netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          netlify-site-id: ${{ secrets.NETLIFY_REMOTE_SITE_ID }}
+          netlify-site-id: ${{ secrets.NETLIFY_HOST_SITE_ID }}

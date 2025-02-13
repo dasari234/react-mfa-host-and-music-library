@@ -1,0 +1,69 @@
+name: Deploy host & remote to Netlify
+
+on:
+  push:
+    branches:
+      - main  # Change if needed
+
+jobs:
+  deploy-frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: host-app # Path to frontend app
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build host
+        run: npm run build
+
+      - name: Deploy host app to Netlify
+        uses: nwtgck/actions-netlify@v2
+        with:
+          publish-dir: ./host-app/dist  # Adjust based on your build output
+          production-branch: main
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "Frontend Deploy 🚀"
+          netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          netlify-site-id: ${{ secrets.NETLIFY_HOST_SITE_ID }}
+
+  deploy-admin:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: music-library # Path to admin app
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build music library
+        run: npm run deploy
+
+      - name: Deploy admin to Netlify
+        uses: nwtgck/actions-netlify@v2
+        with:
+          publish-dir: ./music-library/dist  # Adjust based on your build output
+          production-branch: main
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "Admin Deploy 🚀"
+          netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          netlify-site-id: ${{ secrets.NETLIFY_REMOTE_SITE_ID }}
