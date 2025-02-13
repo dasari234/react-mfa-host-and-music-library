@@ -86,3 +86,16 @@ export default defineConfig({
 - Host application can be launched from the following local host url ```http://localhost:5173/```
 - Enter username as ```admin``` for admin role
 - Enter username as ```user``` for user role
+
+### Build tool and Performance
+- Vite (Next-Gen Frontend Tooling)
+    - Faster Development – Uses ES modules to serve files directly in development, reducing build time.
+    - Instant HMR (Hot Module Replacement) – Near-instant updates without full reloads.
+    - Optimized Build with Rollup – Uses Rollup under the hood for optimized production builds.
+    - Out-of-the-Box Support for Vue, React, and TypeScript – Zero-config setup for modern frameworks
+    - Lightweight and Modern – Designed for modern browsers, meaning fewer polyfills and bloat
+- Webpack (Battle-Tested Build Tool)
+    - Mature and Feature-Rich – Huge ecosystem with plugins and loaders for anything.
+    - Optimized for Complex Apps – Supports advanced optimizations like tree-shaking and code-splitting.
+    - Better Browser Compatibility – Works well with older browsers
+    - Customizable – Flexible configuration for different needs.
