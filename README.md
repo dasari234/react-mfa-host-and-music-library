@@ -3,7 +3,7 @@
 ### *Using npm create vite@latest, two react independent applications were created.
 ### *One is for the Music Library application (music-library), which allows the user to view, group, filter, and sort a collection of songs; the other is for the Host application (host-app) to use the Music Library app (Micro Frontend Architecture).
 
-# Step1 - Take the repository from your preferred terminal and clone it. (https://github.com/dasari234/react-mfa-host-and-music-library.git)
+### Step1 - Take the repository from your preferred terminal and clone it. (https://github.com/dasari234/react-mfa-host-and-music-library.git)
 ## Installation Steps
 ### Step-1 - Run npm install commnad inside host-app, and then run npm run dev command in new terminal to launch application.
 ### Step-2 - Run npm install commnad inside music-library and then run npm run deploy command. This command creates the application and exposes the resources for remoteEntry.js to be used in the host application. It also uses a custom npm script command to build and execute the application to make use of Module Federation features.
