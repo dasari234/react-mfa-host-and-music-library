@@ -5,9 +5,6 @@ import federation from "@originjs/vite-plugin-federation";
 import autoprefixer from "autoprefixer";
 
 export default defineConfig({
-  optimizeDeps: {
-    exclude: ["@rollup/rollup-linux-x64-gnu"],
-  },
   plugins: [
     react(),
     tailwindcss(),
@@ -25,9 +22,6 @@ export default defineConfig({
     target: "esnext",
     minify: false,
     cssCodeSplit: false,
-    rollupOptions: {
-      external: ["@rollup/rollup-linux-x64-gnu"],
-    },
   },
   css: {
     postcss: {
