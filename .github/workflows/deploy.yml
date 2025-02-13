@@ -25,7 +25,7 @@ jobs:
         run: npm install
 
       - name: Build host
-        run: npm run build
+        run: npm run build:prod
 
       - name: Deploy host app to Netlify
         uses: nwtgck/actions-netlify@v2
