@@ -12,7 +12,7 @@ export default defineConfig({
       name: "host",
       remotes: {
         musicLibrary:
-          process.env.VITE_MUSIC_LIBRARY_URL ||
+          process.env.VITE_REMOTE_MUSIC_LIBRARY_URL ||
           "http://localhost:5001/assets/remoteEntry.js",
       },
       shared: ["react", "react-dom"],
