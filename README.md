@@ -99,3 +99,6 @@ export default defineConfig({
     - Optimized for Complex Apps – Supports advanced optimizations like tree-shaking and code-splitting.
     - Better Browser Compatibility – Works well with older browsers
     - Customizable – Flexible configuration for different needs.
+
+## HOSTING at Vercel(remote music library will support cross origin configuration) & Host App hosted at Netlify
+  - ```[a link](https://host-mfa.netlify.app)```
