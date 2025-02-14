@@ -101,4 +101,4 @@ export default defineConfig({
     - Customizable – Flexible configuration for different needs.
 
 ## HOSTING at Vercel(remote music library will support cross origin configuration) & Host App hosted at Netlify
-  - ```([https://host-mfa.netlify.app])```
+  - [https://host-mfa.netlify.app]
